@@ -1,0 +1,81 @@
+{
+  "python": "3.13.15",
+  "libraries": {
+    "tensorflow": "2.20.0",
+    "keras": "3.13.2",
+    "numpy": "2.1.3",
+    "pandas": "2.3.3",
+    "scipy": "1.16.3",
+    "scikit-learn": "1.6.1",
+    "matplotlib": "3.10.0",
+    "tensorflow(module)": "2.20.0"
+  },
+  "platform": "Linux-6.18.55+-x86_64-with-glibc2.39",
+  "gpus": [
+    "/physical_device:GPU:0",
+    "/physical_device:GPU:1"
+  ],
+  "smoke": false,
+  "code_version": "v8",
+  "config": {
+    "SEEDS": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "SELECT_SEEDS": [
+      100,
+      101,
+      102
+    ],
+    "NOISE_SEEDS": [
+      11,
+      12,
+      13
+    ],
+    "FA_POP": 8,
+    "FA_ITERS": 6,
+    "REPEATS": 2,
+    "FA_SEEDS": [
+      1,
+      2,
+      3
+    ],
+    "RS_SEEDS": [
+      123,
+      124,
+      125
+    ],
+    "FIT_SEEDS": [
+      42,
+      43,
+      44
+    ],
+    "BETA0": 1.0,
+    "GAMMA": 5.0,
+    "ALPHA0": 0.3,
+    "ALPHA_DECAY": 0.93,
+    "SEARCH_N": 20000,
+    "SEARCH_VAL_N": 10000,
+    "SEARCH_EPOCHS": 12,
+    "SEARCH_PATIENCE": 3,
+    "FINAL_EPOCHS": 30,
+    "FINAL_PATIENCE": 4,
+    "TOP_K_PER_REP": 2,
+    "LAMBDA": 0.03,
+    "VAL_N": 10000,
+    "TOY_RUNS": 30,
+    "TOY_POP": 20,
+    "TOY_ITERS": 99,
+    "EQUIV_MARGIN_PP": 0.5
+  }
+}

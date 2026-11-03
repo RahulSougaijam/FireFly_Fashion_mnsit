@@ -1,0 +1,20 @@
+{
+  "checks": {
+    "real_run_not_smoke": true,
+    "firefly_unit_tests_passed": true,
+    "toy_benchmarks_ran": true,
+    "dataset_is_fashion_mnist_shape": true,
+    "search_subset_disjoint_from_search_val": true,
+    "search_data_disjoint_from_official_validation": true,
+    "seeds_disjoint (eval vs selection/noise)": false,
+    "fa_rs_matched_distinct_budgets": true,
+    "all_replicates_completed": true,
+    "selection_frozen_before_test": true,
+    "same_seeds_for_all_models": true,
+    "all_final_metrics_finite": true,
+    "holm_correction_applied": true,
+    "checkpoint_recovery_works": true,
+    "all_figures_saved": true
+  },
+  "all_passed": false
+}

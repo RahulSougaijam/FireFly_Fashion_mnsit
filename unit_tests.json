@@ -1,0 +1,10 @@
+{
+  "positions_stay_in_bounds": true,
+  "best_brightness_never_decreases": true,
+  "returned_best_equals_max_over_all_evaluations": true,
+  "search_improves_on_initial_population": true,
+  "dimmer_firefly_moves_onto_brighter": true,
+  "update_is_synchronous": true,
+  "brightest_firefly_only_random_walk": true,
+  "maximises_the_objective": true
+}

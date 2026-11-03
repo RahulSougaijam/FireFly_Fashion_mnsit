@@ -1,0 +1,206 @@
+{
+  "models": {
+    "Default CNN": {
+      "accuracy_mean": 0.9159083333333332,
+      "accuracy_std": 0.002913123388871103,
+      "f1_mean": 0.9157364169843686,
+      "test_loss_mean": 0.23858176173107207,
+      "params": 421642,
+      "train_seconds": 35.00236415863037,
+      "hyperparameters": {
+        "lr": 0.001,
+        "f1": 32,
+        "f2": 64,
+        "dense": 128,
+        "dropout": 0.25,
+        "batch": 128,
+        "n_conv": 2,
+        "bn": 0,
+        "flip": 0,
+        "shift": 0.0,
+        "cosine": 0,
+        "wd": 0.0
+      }
+    },
+    "V7-selected (frozen)": {
+      "accuracy_mean": 0.9163333333333336,
+      "accuracy_std": 0.0016098183597894472,
+      "f1_mean": 0.9161340462420338,
+      "test_loss_mean": 0.2369150829441755,
+      "params": 389964,
+      "train_seconds": 41.5075101852417,
+      "hyperparameters": {
+        "lr": 0.0009309036507861036,
+        "f1": 25,
+        "f2": 58,
+        "dense": 132,
+        "dropout": 0.362,
+        "batch": 128,
+        "n_conv": 2,
+        "bn": 0,
+        "flip": 0,
+        "shift": 0.0,
+        "cosine": 0,
+        "wd": 0.0
+      }
+    },
+    "Strong manual recipe": {
+      "accuracy_mean": 0.9305250000000002,
+      "accuracy_std": 0.0019339667196534732,
+      "f1_mean": 0.9304917660826365,
+      "test_loss_mean": 0.1966562023038109,
+      "params": 521098,
+      "train_seconds": 239.47504661480585,
+      "hyperparameters": {
+        "lr": 0.001,
+        "f1": 64,
+        "f2": 128,
+        "dense": 256,
+        "dropout": 0.3,
+        "batch": 128,
+        "n_conv": 3,
+        "bn": 1,
+        "flip": 1,
+        "shift": 0.1,
+        "cosine": 1,
+        "wd": 0.01
+      }
+    },
+    "FA-selected (V8)": {
+      "accuracy_mean": 0.9352833333333334,
+      "accuracy_std": 0.0012096831541082646,
+      "f1_mean": 0.9353180299087623,
+      "test_loss_mean": 0.19351938642932734,
+      "params": 314331,
+      "train_seconds": 480.04583527644473,
+      "hyperparameters": {
+        "lr": 0.0022387829688762287,
+        "f1": 42,
+        "f2": 100,
+        "dense": 203,
+        "dropout": 0.5,
+        "batch": 32,
+        "n_conv": 3,
+        "bn": 1,
+        "flip": 0,
+        "shift": 0.04,
+        "cosine": 1,
+        "wd": 0.0418
+      }
+    },
+    "RS-selected (V8)": {
+      "accuracy_mean": 0.9335833333333333,
+      "accuracy_std": 0.0012379112417391903,
+      "f1_mean": 0.9335968341235189,
+      "test_loss_mean": 0.1907748669854572,
+      "params": 433489,
+      "train_seconds": 281.5113492210706,
+      "hyperparameters": {
+        "lr": 0.000481974524512367,
+        "f1": 35,
+        "f2": 118,
+        "dense": 251,
+        "dropout": 0.304,
+        "batch": 64,
+        "n_conv": 3,
+        "bn": 1,
+        "flip": 0,
+        "shift": 0.067,
+        "cosine": 1,
+        "wd": 0.0387
+      }
+    }
+  },
+  "primary_comparisons": {
+    "FA-selected (V8) vs Default CNN": {
+      "diff_pp": 1.9374999999999993,
+      "ci95": [
+        1.7708333333333324,
+        2.0916875
+      ],
+      "holm_p": 3.618934330730052e-10,
+      "tost_p": 0.999999998521193,
+      "verdict": "reliably BETTER"
+    },
+    "FA-selected (V8) vs Strong manual recipe": {
+      "diff_pp": 0.4758333333333327,
+      "ci95": [
+        0.3566666666666681,
+        0.586666666666665
+      ],
+      "holm_p": 1.6487265253325154e-05,
+      "tost_p": 0.34967798286157525,
+      "verdict": "reliably BETTER"
+    },
+    "FA-selected (V8) vs RS-selected (V8)": {
+      "diff_pp": 0.17000000000000162,
+      "ci95": [
+        0.08833333333333378,
+        0.250000000000003
+      ],
+      "holm_p": 0.002665965219720684,
+      "tost_p": 6.093559732052818e-06,
+      "verdict": "reliably BETTER"
+    }
+  },
+  "equivalence_margin_pp": 0.5,
+  "proxy": {
+    "spearman": 0.20909090909090913,
+    "spearman_ci95": [
+      -0.5370903737839221,
+      0.7934513623798866
+    ],
+    "noise_sd": 0.008503923183761431,
+    "fa_advantage_on_proxy": 0.05003520349661508,
+    "landscape_cv_r2": {
+      "linear": 0.47299789352206184,
+      "with_interactions": 0.3814524661120256,
+      "quadratic": 0.7715662738487038
+    }
+  },
+  "toy_benchmarks": [
+    {
+      "function": "Sphere",
+      "evaluations_per_run": 2000,
+      "runs": 30,
+      "FA_median": 6.747332000477972e-06,
+      "RS_median": 17.942571336255913,
+      "FA_better_in_runs": 30,
+      "mannwhitney_p_FA_smaller": 1.5099296795810785e-11
+    },
+    {
+      "function": "Rastrigin",
+      "evaluations_per_run": 2000,
+      "runs": 30,
+      "FA_median": 15.920599523116678,
+      "RS_median": 83.71194945004117,
+      "FA_better_in_runs": 30,
+      "mannwhitney_p_FA_smaller": 1.5099296795810785e-11
+    },
+    {
+      "function": "Rosenbrock",
+      "evaluations_per_run": 2000,
+      "runs": 30,
+      "FA_median": 8.066105760276546,
+      "RS_median": 308.08723054851237,
+      "FA_better_in_runs": 30,
+      "mannwhitney_p_FA_smaller": 1.5099296795810785e-11
+    }
+  ],
+  "search": {
+    "replicates": 2,
+    "fa_minutes": 84.65466613372168,
+    "rs_minutes": 79.12471891244252,
+    "rerank_minutes": 153.993195605278,
+    "proxy_epochs": [
+      {
+        "fa": 658,
+        "rs": 657
+      },
+      {
+        "fa": 672,
+        "rs": 652
+      }
+    ]
+  }
+}

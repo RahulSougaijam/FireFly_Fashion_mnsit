@@ -1,0 +1,138 @@
+{
+  "created_utc": "2026-10-29 16:27:41",
+  "created_ts": 1793291261.1599343,
+  "models": {
+    "Default CNN": {
+      "lr": 0.001,
+      "f1": 32,
+      "f2": 64,
+      "dense": 128,
+      "dropout": 0.25,
+      "batch": 128,
+      "n_conv": 2,
+      "bn": 0,
+      "flip": 0,
+      "shift": 0.0,
+      "cosine": 0,
+      "wd": 0.0
+    },
+    "V7-selected (frozen)": {
+      "lr": 0.0009309036507861036,
+      "f1": 25,
+      "f2": 58,
+      "dense": 132,
+      "dropout": 0.362,
+      "batch": 128,
+      "n_conv": 2,
+      "bn": 0,
+      "flip": 0,
+      "shift": 0.0,
+      "cosine": 0,
+      "wd": 0.0
+    },
+    "Strong manual recipe": {
+      "lr": 0.001,
+      "f1": 64,
+      "f2": 128,
+      "dense": 256,
+      "dropout": 0.3,
+      "batch": 128,
+      "n_conv": 3,
+      "bn": 1,
+      "flip": 1,
+      "shift": 0.1,
+      "cosine": 1,
+      "wd": 0.01
+    },
+    "FA-selected (V8)": {
+      "lr": 0.0022387829688762287,
+      "f1": 42,
+      "f2": 100,
+      "dense": 203,
+      "dropout": 0.5,
+      "batch": 32,
+      "n_conv": 3,
+      "bn": 1,
+      "flip": 0,
+      "shift": 0.04,
+      "cosine": 1,
+      "wd": 0.0418
+    },
+    "RS-selected (V8)": {
+      "lr": 0.000481974524512367,
+      "f1": 35,
+      "f2": 118,
+      "dense": 251,
+      "dropout": 0.304,
+      "batch": 64,
+      "n_conv": 3,
+      "bn": 1,
+      "flip": 0,
+      "shift": 0.067,
+      "cosine": 1,
+      "wd": 0.0387
+    }
+  },
+  "selection_rule": "min mean validation loss + LAMBDA*parsimony on the official validation set, finalists only",
+  "config": {
+    "SEEDS": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "SELECT_SEEDS": [
+      100,
+      101,
+      102
+    ],
+    "NOISE_SEEDS": [
+      11,
+      12,
+      13
+    ],
+    "FA_POP": 8,
+    "FA_ITERS": 6,
+    "REPEATS": 2,
+    "FA_SEEDS": [
+      1,
+      2,
+      3
+    ],
+    "RS_SEEDS": [
+      123,
+      124,
+      125
+    ],
+    "FIT_SEEDS": [
+      42,
+      43,
+      44
+    ],
+    "BETA0": 1.0,
+    "GAMMA": 5.0,
+    "ALPHA0": 0.3,
+    "ALPHA_DECAY": 0.93,
+    "SEARCH_N": 20000,
+    "SEARCH_VAL_N": 10000,
+    "SEARCH_EPOCHS": 12,
+    "SEARCH_PATIENCE": 3,
+    "FINAL_EPOCHS": 30,
+    "FINAL_PATIENCE": 4,
+    "TOP_K_PER_REP": 2,
+    "LAMBDA": 0.03,
+    "VAL_N": 10000,
+    "TOY_RUNS": 30,
+    "TOY_POP": 20,
+    "TOY_ITERS": 99,
+    "EQUIV_MARGIN_PP": 0.5
+  }
+}
